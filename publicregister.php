@@ -262,7 +262,7 @@ document.getElementById('box3').placeholder = "Login Password";
 }
 </script>
 <div id="Content">
-<form action="openregister.php" method="post">
+<form action="publicregister.php" method="post">
 <style>
         input{display: inline;}
         h1 {	-webkit-appearance: none;  -moz-appearance: none; appearance: none;
