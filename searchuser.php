@@ -1,3 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="layouthome.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo 'Search' ?>
+</title>
+    <link rel="icon" href="pixlr-bg-result2.png" type="image/png">
+<!-- default favicon -->
+<link rel="shortcut icon" href="pixlr-bg-result2.png" type="image/png">
+<!-- wideley used favicon -->
+<link rel="icon" href="pixlr-bg-result32.png" sizes="32x32" type="image/png">
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result120.png" type="image/png" sizes="120x120">
+<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result152.png" type="image/png" sizes="152x152">
+<!-- google tv favicon -->
+<link rel="icon" href="pixlr-bg-result96.png" sizes="96x96" type="image/jpg">
+</head>
+</html>
 <?php
 require('config.inc.php');
  # Script 18.1 - header.html
@@ -19,24 +37,6 @@ require('mysqli_connect.php'); // Connect to the db.
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="layouthome.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?php echo 'Search' ?>
-</title>
-    <link rel="icon" href="pixlr-bg-result2.png" type="image/png">
-<!-- default favicon -->
-<link rel="shortcut icon" href="pixlr-bg-result2.png" type="image/png">
-<!-- wideley used favicon -->
-<link rel="icon" href="pixlr-bg-result32.png" sizes="32x32" type="image/png">
-<!-- for apple mobile devices -->
-<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result120.png" type="image/png" sizes="120x120">
-<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result152.png" type="image/png" sizes="152x152">
-<!-- google tv favicon -->
-<link rel="icon" href="pixlr-bg-result96.png" sizes="96x96" type="image/jpg">
-</head>
-</html>
 <body scroll="no" style="overflow: hidden">
 <style>
 i {
