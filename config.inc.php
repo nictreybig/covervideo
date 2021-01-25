@@ -12,7 +12,7 @@ define('LIVE', TRUE);
 define('EMAIL', 'InsertRealAddressHere');
 
 // Site URL (base for all redirections):
-define('BASE_URL', 'https://applytree.com/');
+define('BASE_URL', 'http://www.covervideo.com');
 
 // Location of the MySQL connection script:
 define('MYSQL', 'mysqli_connect.php');
