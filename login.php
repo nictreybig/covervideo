@@ -1,53 +1,5 @@
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Login</title>
-<link rel="icon" href="pixlr-bg-result2.png" type="image/png">
-<!-- default favicon -->
-<link rel="shortcut icon" href="pixlr-bg-result2.png" type="image/png">
-<!-- wideley used favicon -->
-<link rel="icon" href="pixlr-bg-result32.png" sizes="32x32" type="image/png">
-<!-- for apple mobile devices -->
-<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result120.png" type="image/png" sizes="120x120">
-<link rel="apple-touch-icon-precomposed" href="pixlr-bg-result152.png" type="image/png" sizes="152x152">
-<!-- google tv favicon -->
-<link rel="icon" href="pixlr-bg-result96.png" sizes="96x96" type="image/jpg">
-</head><?php # login.php
-// This is the login page for the site.
-require('config.inc.php');
-$page_title = 'Login';
-include('headerlogin.html');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-	require(MYSQL);
-
-	// Validate the id:
-	if (!empty($_POST['link_name']))
-	{
-	    $e = mysqli_real_escape_string($dbc, $_POST['link_name']);
-	}
-	else
-	{
-	    $e = FALSE;
-	    echo '<p class="error">You forgot to enter your id!</p>';
-	}
-
-	// Validate the password:
-	if (!empty($_POST['pass'])) 
-	{
-	    $p = trim($_POST['pass']);
-	}
-	else 
-	{
-	    $p = FALSE;
-	    echo '<p class="error">You forgot to enter your password!</p>';
-	}
-
-	if ($e && $p) 
-	{ // If everything's OK.
-
-		// Query the database:
 		$q = "SELECT user_level, pass, edu_cation, work_exp, link_name FROM users WHERE link_name='$e' AND active IS NULL";
 		$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
