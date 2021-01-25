@@ -1,0 +1,466 @@
+@font-face {
+    -webkit-appearance: none;
+	font-family: 'fontello';
+	src: url('./font/fontello.eot?2022');
+	src: url('./font/fontello.eot?2022#iefix') format('embedded-opentype'),
+	url('./font/fontello.woff?2022') format('woff'),
+	url('./font/fontello.ttf?2022') format('truetype'),
+	url('./font/fontello.svg?2022#fontello') format('svg');
+	     url('./font/fontello.woff2?2022') format('woff2'),
+	     url('./font/fontello.woff?2022') format('woff'),
+	     url('./font/fontello.ttf?2022') format('truetype'),
+	     url('./font/fontello.svg?2022#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+input[type="password"] {
+    -webkit-appearance: none;
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	/* add spacing to better separate each image */
+	letter-spacing: 2px;
+}
+video.sixty {
+    -webkit-appearance: none;
+    z-index: 1;
+    object-fit: cover;
+    height: 520px;
+    width: 410px;
+	top:936px;
+	left:160px;
+	position:static;
+	background-color:#cdf5cb;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+}
+
+img.sixty {
+    -webkit-appearance: none;
+    z-index: -1;
+    object-fit: cover;
+	top:936px;
+	left:160px;
+	position:static;
+	background-color:transparent;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+}
+
+img.sixtyphoto {
+    -webkit-appearance: none;
+    z-index: 1;
+    object-fit: cover;
+    height: 520px;
+    width: 420px;
+	top:936px;
+	left:156px;
+	position:static;
+	background-color:transparent;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+}
+
+.container {
+    -webkit-appearance: none;
+    z-index: 1;
+  	position:absolute;
+	top:836px;
+	left:160px;
+	width:150px;
+	padding:10px;
+	background-color:transparent;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:150px;
+	border-style: solid;
+    border-color: red green blue yellow;
+}
+body {
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	background-color:#ffffff;
+	}
+	
+h1 {
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+	font-family: lucida calligraphy, cursive;
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font-size:27px;
+	line-height:28px;
+	font-weight:900;
+	color:#202299;
+	}
+h2 {
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+	font-family: lucida calligraphy, cursive;
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font-size:18px;
+	line-height:28px;
+	font-weight:900;
+	color:#202299;
+}
+p {
+	font:11px/20px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 16px 0px;
+	padding:0px;
+	}
+
+a {
+	color:#1565c2;
+	font-size:15px;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+	
+a:link {color:#1565c2;
+    font-size:15px;
+}
+
+a:visited {color:#5f1b85;}
+
+a:hover {background-color:#47f547;
+    border: 2px solid 	#228B22;
+    border-top-right-radius:-150px -50px;
+    border-top-left-radius:150px 50px;
+    border-bottom-left-radius:-115px -50px;
+    border-bottom-right-radius:50px 75px;
+    text-shadow: 1px 1px #114711;
+}
+
+#Header {
+    -webkit-appearance: none;
+	font-size:30px;
+	color:#00008B;
+	margin:0px -70px 5px 0px;
+	padding:27px 0px 0px 20px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:33px; /* 14px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:white;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height:11px;
+	background-color:#ffffff;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:14px; /* the correct height */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+#Content {
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+    background-color:#cdf5cb;
+	margin:0px 21px 50px 0px;
+}
+#Menuexperience {
+    -webkit-appearance: none;
+	position:absolute;
+	top:650px;
+	left:750px;
+    border:35px solid #73AD21;
+    border-bottom-left-radius:55px 560px;
+    border-top-right-radius:24px 220px;
+    border-bottom-right-radius:400px 218px;
+    border-top-left-radius:415px 280px;
+    height: 180px;
+    width: 180px;
+	background-color:transparent;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menuexperience {width:150px;}
+
+#Menuphoto {
+    -webkit-appearance: none;
+	z-index: 2;
+	position:absolute;
+    top:108px;
+	left:-27px;
+    border:50px solid transparent;
+    border-top-left-radius:5px 50px;
+    border-bottom-right-radius:5px 75px;
+    border-bottom-left-radius:300px 280px;
+    border-top-right-radius:405px 280px;
+    width: 400px;
+    height: 500px;
+	background-color:transparent;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	}
+	#Menupdf {
+    -webkit-appearance: none;
+	z-index: 2;
+	position:absolute;
+    top:108px;
+	left:-27px;
+    border:50px solid transparent;
+    border-top-left-radius:5px 50px;
+    border-bottom-right-radius:5px 75px;
+    border-bottom-left-radius:300px 280px;
+    border-top-right-radius:405px 280px;
+    width: 400px;
+    height: 500px;
+	background-color:transparent;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	}
+/* Again, "be nice to Opera 5". */
+body>#covervideo {width:150px;}
+
+#covervideo {
+    -webkit-appearance: none;
+    z-index: 2;
+	position:absolute;
+	top:108px;
+	left:550px;
+    border: 50px solid transparent;
+    border-top-right-radius:5px 50px;
+    border-bottom-left-radius:5px 75px;
+    border-bottom-right-radius:300px 280px;
+    border-top-left-radius:405px 280px;
+    width: 400px;
+    height: 500px;
+	background-color:transparent;
+	line-height:17px;
+	z-index: 3;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menuphoto {width:150px;}
+
+#Menu {
+    -webkit-appearance: none;
+	position:absolute;
+	background-color:transparent;
+	top:380px;
+	left:750px;
+	width:75px;
+	padding:2px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:140px;
+	height:80px;
+	border-top-left-radius:50px 5px;
+    border-bottom-right-radius:5px 75px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:75px;}
+#Menupdf {
+    -webkit-appearance: none;
+	position:absolute;
+	background-color:transparent;
+	top:380px;
+	left:490px;
+	width:75px;
+	padding:2px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:140px;
+	height:80px;
+	border-top-left-radius:50px 5px;
+    border-bottom-right-radius:5px 75px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menupdf {width:75px;}
+#Menu2 {
+	-webkit-appearance: none;
+	position:absolute;
+	top:160px;
+	left:34px;
+	width:250px;
+	padding:0px;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:250px;
+    height:290px;
+	}
+	#MenuVideoUpload {
+	-webkit-appearance: none;
+	z-index: 1;
+	position:absolute;
+	top:356px;
+	left:650px;
+	width:295px;
+	padding:10px;
+	background-color:green;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:275px;
+	border: 20px solid #3f630c;
+    border-top-left-radius:50px 5px;
+    border-bottom-right-radius:5px 75px;
+	}
+	#Menuvideo {
+	-webkit-appearance: none;
+	position:absolute;
+	z-index:4;
+	top:336px;
+	left:380px;
+	width:595px;
+	padding:10px;
+	border-style: outset;
+	background-color:green;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:295px;
+	}
+/* Again, "be nice to Opera 5". */
+
+#Menu3 {
+    -webkit-appearance: none;
+	position:absolute;
+	top:113px;
+	left:1100px;
+	width:73px;
+	padding:10px;
+	background-color:#7cdc69;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:73px;
+	border:15px solid #3f630c;
+	height:153px;
+	}
+	#Menu4 {
+	-webkit-appearance: none;
+	position:absolute;
+	top:113px;
+	left:1075px;
+	width:300px;
+	text-align:center;
+	background-color:#499b4a;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:300px;
+	height:350px;
+	border:8px solid #3f630c;
+	}
+
+	#Menu88 {
+	    -webkit-appearance: none;
+	position:absolute;
+	top:146px;
+	left:20px;
+	height:525px;
+	padding:10px;
+	border-style: outset;
+	background-color:#96fa96;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:395px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu88 {width:395px;}
+#treeidbackground 
+{
+text-align: center;
+padding: 10px 7;
+background-color:#47f547;
+border: 2px solid 	#228B22;
+border-top-right-radius:-150px -50px;
+border-top-left-radius:150px 50px;
+border-bottom-left-radius:-115px -50px;
+border-bottom-right-radius:50px 75px;
+text-shadow: 1px 1px #114711;
+}
+
+#treekeybackground 
+{
+text-align: center;
+padding: 15px 7;
+background-color:#47f547;
+border: 2px solid 	#228B22;
+border-top-left-radius:-150px -50px;
+border-top-right-radius:150px 50px;
+border-bottom-right-radius:-115px -50px;
+border-bottom-left-radius:50px 75px;
+text-shadow: 1px 1px #114711;
+}
+
+#treeidvariablebackground
+{
+text-align: center;
+padding: 10px 7;
+background-color:#47f547;
+border: 2px solid 	#228B22;
+border-top-left-radius:-150px -50px;
+border-top-right-radius:150px 50px;
+border-bottom-right-radius:-115px -50px;
+border-bottom-left-radius:50px 75px;
+text-shadow: 1px 1px #114711;
+}
+
+#MenuH {
+	position:absolute;
+	top:136px;
+	left:10px;
+	 border: 10px solid #3f630c;
+  border-top-left-radius:50px 5px;
+border-bottom-right-radius:5px 75px;
+	width:150px;
+	padding:10px;
+	background-color:transparent;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:150px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#MenuHomePage {width:150px;}
+.leafcollect {
+    	position:absolute;
+	top:72px;
+	left:800px;
+}

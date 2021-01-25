@@ -1,0 +1,121 @@
+a {
+    margin:10px 10px;
+	font-size:150px;
+	text-decoration:none;
+	font-weight:800;
+	font-family: lucida calligraphy;
+}
+.hover1
+{
+    padding-left: 30px;
+    font-family: lucida calligraphy;
+}
+
+.hover2
+{
+    padding-right: 30px;
+    font-family: lucida calligraphy;
+}
+.hover1:hover {
+    font-family: lucida calligraphy, cursive;
+    color: #ffffff;
+    background-color:#87ceeb;
+    border: 2px solid 	#338cb0;
+    border-top-left-radius:12px 36px;
+    border-bottom-right-radius:40px 40px;
+    border-bottom-left-radius:51px 72px;
+    border-top-right-radius:151px 72px;
+    text-shadow: 1px 1px #e3ffe3;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+.hover1:hover::after {
+    font-family: lucida calligraphy, cursive;
+    color: #00000;
+    background-color:#e3d6ff;
+    border: 2px solid 	purple;
+    border-top-left-radius:2px 15px;
+    border-top-right-radius:120px 56px;
+    border-bottom-right-radius:40px 40px;
+    border-bottom-left-radius:51px 72px;
+    text-shadow: 1px 1px #e3ffe3;
+    padding-top: 30px;
+    content: 'Create';
+}
+
+.hover2:hover {
+    font-family: lucida calligraphy, cursive;
+    color: #ffffff;
+    background-color:#87ceeb;
+    border: 2px solid 	#338cb0;
+    border-top-right-radius:12px 36px;
+    border-top-left-radius:122px 72px;
+    border-bottom-left-radius:40px 40px;
+    border-bottom-right-radius:51px 72px;
+    text-shadow: 1px 1px #e3ffe3;
+    direction:rtl;
+    padding-left: 30px;
+    padding-top: 8px;
+}
+.hover2:hover::after {
+    font-family: lucida calligraphy, cursive;
+    color: #ffffff;
+    background-color:#e3d6ff;
+    border: 2px solid 	purple;
+    border-top-right-radius:2px 15px;
+    border-top-left-radius:120px 56px;
+    border-bottom-left-radius:40px 40px;
+    border-bottom-right-radius:51px 72px;
+    text-shadow: 1px 1px #e3ffe3;
+    direction:rtl;
+    content: 'Login';
+    padding-top: 30px;
+}
+
+.leaf1 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.leaf2 {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+.leaf3 {
+  position: absolute;
+  top: 135px;
+  left: 83px;
+  transform: rotate(-90deg);
+}
+.leaf4 {
+  position: absolute;
+  top: 18px;
+  left: 233px;
+  transform: rotate(90deg);
+}
+.leaf5 {
+  position: absolute;
+  top: 11px;
+  left: 99px;
+  transform: rotate(45deg);
+}
+.leaf6 {
+  position: absolute;
+  top: 199px;
+  left: 75px;
+  transform: rotate(-135deg);
+}
+.leaf7 {
+  position: absolute;
+  top: 115px;
+  left: 324px;
+  transform: rotate(135deg);
+}
+.leaf8 {
+  position: absolute;
+  top: 91px;
+  left: 136px;
+  transform: rotate(-45deg);
+}
