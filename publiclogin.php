@@ -452,7 +452,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 } // End of SUBMIT conditional.
 ?>
 <div id="Content">
-<form action="openlogin.php" id="logincenter" method="post">
+<form action="publiclogin.php" id="logincenter" method="post">
 	    <style>
 	    #logincenter
 	    {
