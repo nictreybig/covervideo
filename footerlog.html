@@ -1,0 +1,245 @@
+<!-- Start of Footer -->
+</div><!-- Content -->
+<style>
+i {
+-webkit-transition-duration: 0.4s;
+-moz-transition-duration: 0.4s;
+-o-transition-duration: 0.4s;
+transition-duration: 0.4s;
+
+-webkit-transition-property: -webkit-transform;
+-moz-transition-property: -moz-transform;
+-o-transition-property: -o-transform;
+transition-property: transform;
+
+overflow:hidden;
+}
+
+i[type=searchtreeid]:hover
+{
+-webkit-transform:scaleX(-1);
+-moz-transform:scaleX(-1);
+-o-transform:scaleX(-1);
+}
+i[type=firsteye]:hover{
+-webkit-transform:rotate(37.75deg);
+-moz-transform:rotate(37.75deg);
+-o-transform:rotate(37.75deg);
+}
+i[type=secondeye]:hover{
+-webkit-transform:rotate(-37.75deg);
+-moz-transform:rotate(-37.75deg);
+-o-transform:rotate(-37.75deg);
+}
+i[type=trashtophoto]:hover{
+-webkit-transform:rotate(-52.25deg);
+-moz-transform:rotate(-52.25deg);
+-o-transform:rotate(-52.25deg);
+}
+i[type=trashtovideo]:hover{
+-webkit-transform:rotate(360deg);
+-moz-transform:rotate(360deg);
+-o-transform:rotate(360deg);
+}
+i[type=photototrash]:hover{
+-webkit-transform:rotate(60deg);
+-moz-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+}
+i[type=videototrash]:hover{
+-webkit-transform:rotate(-180deg);
+-moz-transform:rotate(-180deg);
+-o-transform:rotate(-180deg);
+}
+input[type="hidden"]
+{
+    border-top-left-radius:230px 240px;
+    border-top-right-radius:240px 230px;
+    height:25px;
+    width:86px;
+    color:white;
+    font-size:12px;
+    border-bottom-left-radius:84px 48px;
+    border-bottom-right-radius:84px 48px;
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+    cursor:grab;
+    color: #ffffff;
+    padding: 9px;
+    background-color: #66ccff;
+    border: 1px solid black;
+}
+input[name="MAX_FILE_SIZE"] {
+  background: red;
+}
+input[type="submit"]:hover
+{
+    height: 200px;
+    width:120px;
+    background-color: #26bf4e;
+    color:#457d27;
+    font-size:20px;
+    padding:20px;
+    padding: 12px;
+    background-color: white;
+    border: 5px solid #006633;
+    height: 100px;
+}
+input[type="submit"]
+{
+    border-top-left-radius:230px 240px;
+    border-top-right-radius:240px 230px;
+    height:25px;
+    width:86px;
+    color:white;
+    font-size:12px;
+    border-bottom-left-radius:84px 48px;
+    border-bottom-right-radius:84px 48px;
+    -webkit-appearance: none;  -moz-appearance: none; appearance: none;
+    cursor:grab;
+    color: #ffffff;
+    padding: 9px;
+    background-color: #66ccff;
+    border: 1px solid black;
+}
+#volumeswell
+{
+    font-size:30px;
+    border-bottom-left-radius:16px 5px;
+    border-top-left-radius:220px 245px;
+    border-bottom-right-radius:230px 240px;
+    color:white;
+    z-index:7;
+    padding-top:35px;
+    padding-left:16px;
+    background-color:forestgreen;
+    width:333px;
+    height:90px;
+    left:500px;
+}
+</style>
+<div id="Menu2">
+<?php
+// Check if the form has been submitted:
+if (isset($_SESSION['first_name'])) 
+{
+        if(isset($_SESSION['imged']))
+        {
+        ?>
+        </body>
+        </html>
+        <?php // Flush the buffered output.
+        ob_end_flush();
+        }
+        else
+        {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+        {
+    
+    	    // Check for an uploaded file:
+    	    if (isset($_FILES['upload'])) 
+    	    {
+    
+    		    // Validate the type. Should be JPEG or PNG.
+    		    $allowed = ['image/pjpeg', 'image/jpeg', 'image/JPG', 'image/jpg', 'image/X-PNG', 'image/PNG', 'image/png', 'image/x-png', 'image/x-TIF', 'image/TIF', 'image/tif', 'image/x-tif', 'image/x-EPS', 'image/EPS', 'image/eps', 'image/x-eps'];
+    		    if (in_array($_FILES['upload']['type'], $allowed)) 
+    		    {
+    
+    			    // Move the file over.
+    			    
+    			    $link_name = $_SESSION['link_name'];
+                    $temp = explode('.', $_FILES['upload']['name']);
+                    $newimgname = round(microtime(true)) . '.' . end($temp);
+    			    if (move_uploaded_file ($_FILES['upload']['tmp_name'], $link_name . "/" . $newimgname))
+    			    {
+    		            echo '<p><em>The file has been uploaded!</em></p>';
+    			    } // End of move... IF.
+                
+                }
+    		    else 
+    		    { // Invalid type.
+    			        echo '<p class="error">Please upload a JPEG or PNG image.</p>';
+    		    }
+    
+    	    } // End of isset($_FILES['upload']) IF.
+    
+    	        // Check for an error:
+    	        
+    	    if ($_FILES['upload']['error'] > 0) 
+    	    {
+    		
+    		    echo '<p class="error">The file could not be uploaded because: <strong>';
+    
+    		    // Print a message based upon the error.
+    		
+    		    switch ($_FILES['upload']['error']) 
+    		    {
+    			    case 1:
+    				    print 'The file exceeds the upload_max_filesize setting in php.ini.';
+    				    break;
+    			    case 2:
+    				    print 'The file exceeds the MAX_FILE_SIZE setting in the HTML form.';
+    				    break;
+    			    case 3:
+    			    	print 'The file was only partially uploaded.';
+    				    break;
+    			    case 4:
+    			    	print 'No file was uploaded.';
+    				    break;
+    		    	case 6:
+    			    	print 'No temporary folder was available.';
+    				    break;
+    			    case 7:
+    				    print 'Unable to write to the disk.';
+    				    break;
+    			    case 8:
+    				    print 'File upload stopped.';
+    				    break;
+    			    default:
+    				    print 'A system error occurred.';
+    				    break;
+    		    } // End of switch.
+    
+    		    print '</strong></p>';
+    
+    	    } // End of error IF.
+    
+    	        // Delete the file if it still exists:
+    	    if (file_exists ($_FILES['upload']['tmp_name']) && is_file($_FILES['upload']['tmp_name']) ) 
+    	    {
+    		    unlink ($_FILES['upload']['tmp_name']);
+    	    }
+    
+        } // End of the submitted conditional.
+    ?>
+    <form enctype="multipart/form-data" action="../upload_image.php" method="post">
+              <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style> legend{ font-size:35px;} strong{ font-size:35px;} h2{font-size:38px;}</style>
+    	<legend><br><h2>1) Choose Photo</h2><input type="file" id="volumeswell" name="upload"><br><br><h2>2) Post Photo</h2><input type="submit" style="left:500px;border-bottom-left-radius:5px 16px;border-top-left-radius:245px 220px;border-bottom-right-radius:240px 230px;border-bottom-left-radius:240px 230px;height:100px;font-size:48px;width:380px;background-color:forestgreen;font-type:Lucida calligraphy;color:white;padding:6px;"name="submit" value= "POST PHOTO">
+    <br><br>
+    <?php
+}
+}
+else
+{
+?>
+        </html>
+        <?php // Flush the buffered output.
+        ob_end_flush();
+}
+?>
+</div>
+<div id="Menu">
+    <h2>3) Video <br> <a href="https://covervideo.com/cvupload.php" style="none" title="Post Video"></h2><i class='fas fa-play' style="font-size:72px;"></i></a><br><p></p>
+</div>
+<div id="Menu4">
+    <br><b style="font-size:32px">Delete</b><br><br><b style="font-size:24px">Photo <u>Both</u> Video</b><br><br>&nbsp;
+    <a href="deletecoverphoto.php" title="Delete Cover Photo"><i type="photototrash" class="fas fa-portrait" style="font-size:64px;"></i></a>&nbsp;&nbsp; <a href="deletecovervideoandphoto.php" title="Recycle Photo and Video"><i type="trashtovideo" class='fas fa-recycle' style="font-size:81px;"></i></a>&nbsp;&nbsp; <a href="deletecovervideo.php" title="Recycle Cover Video"><i type="videototrash" class='fas fa-play'style="font-size:64px;"></i></a><br><br><br><b style="font-size:32px">Logout</b><br><br>
+    &nbsp; <a href="https://covervideo.com/logout.php" title="Logout"><i class='fa fa-window-close' style="font-size:92px;"></i></a><br><br><p></p>
+    </div>
+</body>
+</html>
+<?php // Flush the buffered output.
+ob_end_flush();
+?>
